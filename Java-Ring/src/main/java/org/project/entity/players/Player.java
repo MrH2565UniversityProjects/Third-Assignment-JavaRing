@@ -23,23 +23,20 @@ public abstract class Player {
         this.armor = armor;
     }
 
-    @Override
+
     public void attack(Entity target) {
         target.takeDamage(weapon.getDamage());
     }
 
-    @Override
     public void defend() {
         // TODO: (BONUS) IMPLEMENT A DEFENSE METHOD FOR SHIELDS
     }
 
     // TODO: (BONUS) UPDATE THE FORMULA OF TAKING DAMAGE
-    @Override
     public void takeDamage(int damage) {
         hp -= damage - armor.getDefense();
     }
 
-    @Override
     public void heal(int health) {
         hp += health;
         if (hp > maxHP) {
@@ -47,7 +44,6 @@ public abstract class Player {
         }
     }
 
-    @Override
     public void fillMana(int mana) {
         mp += mana;
         if (mp > maxMP) {
@@ -64,7 +60,6 @@ public abstract class Player {
         return hp;
     }
 
-    @Override
     public int getMaxHP() {
         return maxHP;
     }
@@ -73,7 +68,6 @@ public abstract class Player {
         return mp;
     }
 
-    @Override
     public int getMaxMP() {
         return maxMP;
     }
